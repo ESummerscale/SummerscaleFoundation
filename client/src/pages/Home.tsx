@@ -1,25 +1,38 @@
-import { Button } from "@/components/ui/button";
-import { Loader2 } from "lucide-react";
-import { Streamdown } from 'streamdown';
-
 /**
- * All content in this page are only for example, replace with your own feature implementation
- * When building pages, remember your instructions in Frontend Best Practices, Design Guide and Common Pitfalls
+ * Home — single-page scrolling layout for The Summerscale Foundation.
+ *
+ * Design: Humanist Modernism — warm editorial clarity.
+ * Sections (top → bottom):
+ *   1. HeroSection
+ *   2. MissionSection
+ *   3. CarouselSection
+ *   4. ContactSection
+ *   5. SiteFooter
+ *
+ * Scroll-reveal animations are initialised via useScrollReveal().
  */
+
+import CarouselSection from "@/components/CarouselSection";
+import ContactSection from "@/components/ContactSection";
+import HeroSection from "@/components/HeroSection";
+import MissionSection from "@/components/MissionSection";
+import SiteFooter from "@/components/SiteFooter";
+import StickyHeader from "@/components/StickyHeader";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
+
 export default function Home() {
-  // If theme is switchable in App.tsx, we can implement theme toggling like this:
-  // const { theme, toggleTheme } = useTheme();
+  useScrollReveal();
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <>
+      <StickyHeader />
       <main>
-        {/* Example: lucide-react for icons */}
-        <Loader2 className="animate-spin" />
-        Example Page
-        {/* Example: Streamdown for markdown rendering */}
-        <Streamdown>Any **markdown** content</Streamdown>
-        <Button variant="default">Example Button</Button>
+        <HeroSection />
+        <MissionSection />
+        <CarouselSection />
+        <ContactSection />
       </main>
-    </div>
+      <SiteFooter />
+    </>
   );
 }
