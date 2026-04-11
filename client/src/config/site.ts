@@ -15,7 +15,7 @@
 
 // ─── BRAND & IDENTITY ────────────────────────────────────────
 export const SITE_TITLE = "The Summerscale Foundation";
-export const SITE_TAGLINE = "Improving lives through community-driven impact";
+export const SITE_TAGLINE = "Helping children thrive across the South-East";
 export const SITE_DESCRIPTION =
   "Supporting communities through sustainable initiatives, education, and direct aid.";
 
@@ -39,28 +39,28 @@ export const CAROUSEL_IMAGES = [
   {
     src: "https://d2xsxph8kpxj0f.cloudfront.net/310519663543813440/mhM4wK3KKAa6F2vqxiSRWY/carousel-1_3f0a05b3.jpg",
     alt: "Community outreach programme",
-    caption: "Community Outreach",
+    caption: "Supporting Local Communities",
   },
   {
     src: "https://d2xsxph8kpxj0f.cloudfront.net/310519663543813440/mhM4wK3KKAa6F2vqxiSRWY/carousel-2_1501b719.jpg",
     alt: "Volunteers distributing food and supplies",
-    caption: "Volunteer Supply Drive",
+    caption: "Providing Essential Support",
   },
   {
     src: "https://d2xsxph8kpxj0f.cloudfront.net/310519663543813440/mhM4wK3KKAa6F2vqxiSRWY/carousel-3_c9e364c7.jpg",
     alt: "Educational workshop for children and adults",
-    caption: "Educational Workshops",
+    caption: "Empowering Through Education",
   },
   {
     src: "https://d2xsxph8kpxj0f.cloudfront.net/310519663543813440/mhM4wK3KKAa6F2vqxiSRWY/carousel-4_5c3ab73a.jpg",
     alt: "Local partnership initiative signing",
-    caption: "Local Partnerships",
+    caption: "Building Partnerships for Change",
   },
 ];
 
 // ─── FOOTER ──────────────────────────────────────────────────
-export const FOOTER_COPYRIGHT = `© ${new Date().getFullYear()} The Summerscale Foundation. All rights reserved.`;
-export const FOOTER_REGISTERED_TEXT = "Registered charity."; // set to "" to hide
+export const FOOTER_COPYRIGHT = `© ${new Date().getFullYear()} The Summerscale Foundation. All rights reserved`;
+export const FOOTER_REGISTERED_TEXT = "Registered charity number 1208789"; // set to "" to hidee
 
 // ─── COLOUR PALETTE ──────────────────────────────────────────
 //  These values are mirrored in index.css as CSS custom properties.
@@ -100,3 +100,6 @@ export const LAYOUT = {
   sectionPaddingDesktop: "96px",
   sectionPaddingMobile: "56px",
 } as const;
+
+// ─── LOGO ────────────────────────────────────────────────────
+export const LOGO_URL = "https://d2xsxph8kpxj0f.cloudfront.net/310519663543813440/mhM4wK3KKAa6F2vqxiSRWY/pasted_file_vGMlBV_image_1c9e9085.png";

@@ -7,7 +7,7 @@
  * teal accent rule, DM Serif Display heading.
  */
 
-import { SITE_TAGLINE, SITE_TITLE } from "@/config/site";
+import { LOGO_URL, SITE_TAGLINE, SITE_TITLE } from "@/config/site";
 
 export default function HeroSection() {
   return (
@@ -50,7 +50,15 @@ export default function HeroSection() {
       >
         {/* Logo mark */}
         <div style={{ marginBottom: "2rem", display: "flex", justifyContent: "center" }}>
-          <HeroLogo />
+          <img
+            src={LOGO_URL}
+            alt="The Summerscale Foundation logo"
+            style={{
+              maxWidth: "280px",
+              width: "100%",
+              height: "auto",
+            }}
+          />
         </div>
 
         {/* Charity name */}
@@ -130,34 +138,4 @@ export default function HeroSection() {
   );
 }
 
-/** Large hero logo mark */
-function HeroLogo() {
-  return (
-    <svg
-      width="72"
-      height="72"
-      viewBox="0 0 72 72"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      aria-label="The Summerscale Foundation logo"
-      role="img"
-    >
-      <rect width="72" height="72" rx="14" fill="rgba(255,255,255,0.1)" />
-      <rect
-        x="1"
-        y="1"
-        width="70"
-        height="70"
-        rx="13"
-        stroke="rgba(255,255,255,0.15)"
-        strokeWidth="1.5"
-      />
-      <path
-        d="M47 24C44 21 40.5 19.5 36 19.5C29 19.5 24 23.5 24 29.5C24 35.5 28.5 38 34 39.5L37 40.5C41 41.5 44 43.5 44 47C44 51 41 53.5 36 53.5C31.5 53.5 28 52 25.5 49.5"
-        stroke="#4AA3A2"
-        strokeWidth="3.5"
-        strokeLinecap="round"
-      />
-    </svg>
-  );
-}
+

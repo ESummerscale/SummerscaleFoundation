@@ -7,7 +7,7 @@
  */
 
 import { useEffect, useState } from "react";
-import { FEATURES, SITE_TITLE } from "@/config/site";
+import { FEATURES, LOGO_URL, SITE_TITLE } from "@/config/site";
 
 export default function StickyHeader() {
   const [visible, setVisible] = useState(false);
@@ -58,21 +58,18 @@ export default function StickyHeader() {
           style={{
             display: "flex",
             alignItems: "center",
-            gap: "10px",
+            gap: "12px",
             textDecoration: "none",
           }}
         >
-          <LogoMark size={28} />
-          <span
+          <img
+            src={LOGO_URL}
+            alt="The Summerscale Foundation logo"
             style={{
-              fontFamily: "'DM Serif Display', Georgia, serif",
-              fontSize: "1.05rem",
-              color: "#1E3A5F",
-              letterSpacing: "-0.01em",
+              height: "40px",
+              width: "auto",
             }}
-          >
-            {SITE_TITLE}
-          </span>
+          />
         </a>
 
         {/* Nav anchor */}
@@ -107,24 +104,4 @@ export default function StickyHeader() {
   );
 }
 
-/** Inline SVG logo mark — a simple stylised "S" monogram */
-function LogoMark({ size = 32 }: { size?: number }) {
-  return (
-    <svg
-      width={size}
-      height={size}
-      viewBox="0 0 40 40"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      aria-hidden="true"
-    >
-      <rect width="40" height="40" rx="6" fill="#1E3A5F" />
-      <path
-        d="M26 13.5C24.5 12 22.5 11 20 11C16 11 13 13.5 13 17C13 20.5 15.5 22 19 23L21 23.5C23.5 24 25 25 25 27C25 29.5 23 31 20 31C17.5 31 15.5 30 14 28.5"
-        stroke="#4AA3A2"
-        strokeWidth="2.2"
-        strokeLinecap="round"
-      />
-    </svg>
-  );
-}
+

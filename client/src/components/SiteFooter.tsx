@@ -6,7 +6,7 @@
  * Near-black background, muted text, teal logo mark.
  */
 
-import { FOOTER_COPYRIGHT, FOOTER_REGISTERED_TEXT, SITE_TITLE } from "@/config/site";
+import { FOOTER_COPYRIGHT, FOOTER_REGISTERED_TEXT, LOGO_URL, SITE_TITLE } from "@/config/site";
 
 export default function SiteFooter() {
   return (
@@ -29,7 +29,14 @@ export default function SiteFooter() {
         }}
       >
         {/* Logo mark */}
-        <FooterLogo />
+        <img
+          src={LOGO_URL}
+          alt="The Summerscale Foundation logo"
+          style={{
+            height: "36px",
+            width: "auto",
+          }}
+        />
 
         {/* Charity name */}
         <p
@@ -62,23 +69,4 @@ export default function SiteFooter() {
   );
 }
 
-function FooterLogo() {
-  return (
-    <svg
-      width="32"
-      height="32"
-      viewBox="0 0 40 40"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      aria-hidden="true"
-    >
-      <rect width="40" height="40" rx="6" fill="rgba(255,255,255,0.06)" />
-      <path
-        d="M26 13.5C24.5 12 22.5 11 20 11C16 11 13 13.5 13 17C13 20.5 15.5 22 19 23L21 23.5C23.5 24 25 25 25 27C25 29.5 23 31 20 31C17.5 31 15.5 30 14 28.5"
-        stroke="#4AA3A2"
-        strokeWidth="2.2"
-        strokeLinecap="round"
-      />
-    </svg>
-  );
-}
+
