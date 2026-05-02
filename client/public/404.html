@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirecting...</title>
+    <script>
+      // Save the original path
+      const redirect = location.pathname + location.search + location.hash;
+      sessionStorage.setItem("spa_redirect", redirect);
+
+      // Redirect to root
+      location.replace("/SummerscaleFoundation/");
+    </script>
+  </head>
+  <body></body>
+</html>
