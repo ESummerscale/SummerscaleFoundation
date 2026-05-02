@@ -1,0 +1,186 @@
+/*
+ * ============================================================
+ *  SUMMERSCALE FOUNDATION — GLOBAL STYLES & DESIGN TOKENS
+ * ============================================================
+ *  Design: Humanist Modernism — warm editorial clarity
+ *  Fonts:  DM Serif Display (headings) + DM Sans (body)
+ *  Palette:
+ *    --color-primary   #1E3A5F  Deep Blue
+ *    --color-accent    #4AA3A2  Muted Teal
+ *    --color-bg        #F9FAFB  Soft White
+ *    --color-divider   #E5E7EB  Light Grey
+ *    --color-text      #111827  Primary text
+ *    --color-muted     #6B7280  Secondary text
+ * ============================================================
+ */
+
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* Brand tokens — mirrors config/site.ts COLORS */
+  --brand-primary: #1E3A5F;
+  --brand-accent: #4AA3A2;
+  --brand-bg: #F9FAFB;
+  --brand-surface: #FFFFFF;
+  --brand-divider: #E5E7EB;
+  --brand-text: #111827;
+  --brand-muted: #6B7280;
+}
+
+:root {
+  --radius: 0.5rem;
+
+  /* Tailwind semantic tokens mapped to brand palette */
+  --background: oklch(0.984 0.002 247.839);   /* #F9FAFB */
+  --foreground: oklch(0.129 0.015 264.695);   /* #111827 */
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.129 0.015 264.695);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.129 0.015 264.695);
+
+  /* Primary = Deep Blue #1E3A5F */
+  --primary: oklch(0.295 0.076 243.662);
+  --primary-foreground: oklch(0.984 0.002 247.839);
+
+  /* Secondary = Light Grey surface */
+  --secondary: oklch(0.961 0.003 264.542);
+  --secondary-foreground: oklch(0.295 0.076 243.662);
+
+  /* Muted */
+  --muted: oklch(0.961 0.003 264.542);
+  --muted-foreground: oklch(0.52 0.017 264.695);   /* #6B7280 */
+
+  /* Accent = Muted Teal #4AA3A2 */
+  --accent: oklch(0.655 0.09 192.579);
+  --accent-foreground: oklch(1 0 0);
+
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.985 0 0);
+  --border: oklch(0.921 0.006 264.542);   /* #E5E7EB */
+  --input: oklch(0.921 0.006 264.542);
+  --ring: oklch(0.655 0.09 192.579);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-size: 17px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  a[href] {
+    @apply cursor-pointer;
+  }
+}
+
+@layer components {
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    max-width: 1100px;
+  }
+
+  @media (min-width: 640px) {
+    .container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+
+  .flex {
+    min-height: 0;
+    min-width: 0;
+  }
+
+  /* Section label — small all-caps label above headings */
+  .section-label {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--brand-accent);
+  }
+
+  /* Teal rule divider */
+  .teal-rule {
+    display: block;
+    width: 40px;
+    height: 2px;
+    background-color: var(--brand-accent);
+    margin-bottom: 1.25rem;
+  }
+
+  /* Scroll-reveal animation */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Staggered children */
+  .reveal-stagger > * {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  }
+
+  .reveal-stagger.visible > *:nth-child(1) { opacity: 1; transform: none; transition-delay: 0ms; }
+  .reveal-stagger.visible > *:nth-child(2) { opacity: 1; transform: none; transition-delay: 100ms; }
+  .reveal-stagger.visible > *:nth-child(3) { opacity: 1; transform: none; transition-delay: 200ms; }
+  .reveal-stagger.visible > *:nth-child(4) { opacity: 1; transform: none; transition-delay: 300ms; }
+}
