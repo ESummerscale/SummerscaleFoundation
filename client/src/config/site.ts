@@ -37,24 +37,14 @@ export const CAROUSEL_SUBTEXT =
 
 export const CAROUSEL_IMAGES = [
   {
-    src: "https://d2xsxph8kpxj0f.cloudfront.net/310519663543813440/mhM4wK3KKAa6F2vqxiSRWY/carousel-1_3f0a05b3.jpg",
-    alt: "Community outreach programme",
-    caption: "Supporting Local Communities",
+    src: "https://i.ibb.co/7xM4CJFm/carousel-image-1.jpg",
+    alt: "Founder Zak Summerscale standing alongside several school students, in front of an adaptive minibus with the Summerscale Foundation logo. Two students are holding a white cane and one student is using a wheelchair.",
+    caption: "Donated an adaptive minibus to Angering School (partnering with Variety Golf Society)",
   },
   {
-    src: "https://d2xsxph8kpxj0f.cloudfront.net/310519663543813440/mhM4wK3KKAa6F2vqxiSRWY/carousel-2_1501b719.jpg",
-    alt: "Volunteers distributing food and supplies",
-    caption: "Providing Essential Support",
-  },
-  {
-    src: "https://d2xsxph8kpxj0f.cloudfront.net/310519663543813440/mhM4wK3KKAa6F2vqxiSRWY/carousel-3_c9e364c7.jpg",
-    alt: "Educational workshop for children and adults",
-    caption: "Empowering Through Education",
-  },
-  {
-    src: "https://d2xsxph8kpxj0f.cloudfront.net/310519663543813440/mhM4wK3KKAa6F2vqxiSRWY/carousel-4_5c3ab73a.jpg",
-    alt: "Local partnership initiative signing",
-    caption: "Building Partnerships for Change",
+    src: "https://i.ibb.co/FkvkQ60R/readforgoodhome.jpg",
+    alt: "Image of a smiling child reading a book",
+    caption: "Donated £27,000 to ReadForGood to provide books to sick children in hospital.",
   },
 ];
 
