@@ -98,9 +98,11 @@ The `.github/workflows/deploy.yml` file handles:
 - Check that `.github/workflows/deploy.yml` exists in your repository
 - Verify the file has no YAML syntax errors
 - Go to **Settings** → **Pages** and confirm "GitHub Actions" is selected as the source
+- Ensure pnpm is installed before Node.js in the workflow (the order matters!)
 
 ### Site not updating
 - Check the **Actions** tab to see if the workflow completed successfully
+- Look for error messages like "pnpm not found" — this means the workflow step order needs fixing
 - Clear your browser cache (Ctrl+Shift+Delete or Cmd+Shift+Delete)
 - Wait 2–3 minutes for GitHub's CDN to update
 
