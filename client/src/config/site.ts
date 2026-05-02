@@ -39,7 +39,7 @@ export const CAROUSEL_IMAGES = [
   {
     src: "https://i.ibb.co/7xM4CJFm/carousel-image-1.jpg",
     alt: "Founder Zak Summerscale standing alongside several school students, in front of an adaptive minibus with the Summerscale Foundation logo. Two students are holding a white cane and one student is using a wheelchair.",
-    caption: "Donated an adaptive minibus to Angering School (partnering with Variety Golf Society)",
+    caption: "Donated an adaptive minibus to Angmering School (partnering with Variety Golf Society)",
   },
   {
     src: "https://i.ibb.co/FkvkQ60R/readforgoodhome.jpg",
