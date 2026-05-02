@@ -99,12 +99,21 @@ The `.github/workflows/deploy.yml` file handles:
 - Verify the file has no YAML syntax errors
 - Go to **Settings** → **Pages** and confirm "GitHub Actions" is selected as the source
 - Ensure pnpm is installed before Node.js in the workflow (the order matters!)
+- Check the **Actions** tab for detailed error messages
+
+### Getting 404 errors
+- Verify the workflow uploaded the correct build output path (`dist/public`)
+- Check the **Actions** tab for build errors
+- Ensure the workflow completed successfully (green checkmark)
+- Clear your browser cache (Ctrl+Shift+Delete or Cmd+Shift+Delete)
+- Wait 2–3 minutes for GitHub's CDN to update
+- If using a subdomain repo (e.g., `username.github.io/repo-name`), the base path must be configured correctly (this is handled automatically)
 
 ### Site not updating
 - Check the **Actions** tab to see if the workflow completed successfully
-- Look for error messages like "pnpm not found" — this means the workflow step order needs fixing
-- Clear your browser cache (Ctrl+Shift+Delete or Cmd+Shift+Delete)
-- Wait 2–3 minutes for GitHub's CDN to update
+- Look for error messages in the workflow logs
+- Verify the build step produced output in `dist/public`
+- Clear your browser cache and wait 2–3 minutes
 
 ### Custom domain not working
 - Verify DNS records are correctly configured
