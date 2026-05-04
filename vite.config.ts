@@ -159,7 +159,7 @@ const plugins = [
 ];
 
 export default defineConfig({
-  base: '/SummerscaleFoundation/',
+  base: '/',
   plugins,
   resolve: {
     alias: {
