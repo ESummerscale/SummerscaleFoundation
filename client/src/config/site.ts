@@ -44,7 +44,7 @@ export const CAROUSEL_IMAGES = [
   {
     src: "https://i.ibb.co/FkvkQ60R/readforgoodhome.jpg",
     alt: "Image of a smiling child reading a book",
-    caption: "Donated £27,000 to ReadForGood to provide books to sick children in hospital.",
+    caption: "Funded four mobile bookcases and a year's supply of childrens' books to 4 hospitals through ReadForGood, ensuring sick children have access to books.",
   },
 ];
 
@@ -92,4 +92,4 @@ export const LAYOUT = {
 } as const;
 
 // ─── LOGO ────────────────────────────────────────────────────
-export const LOGO_URL = "https://d2xsxph8kpxj0f.cloudfront.net/310519663543813440/mhM4wK3KKAa6F2vqxiSRWY/pasted_file_vGMlBV_image_1c9e9085.png";
+export const LOGO_URL = "https://i.ibb.co/6dJs9n7/The-Summerscale-Foundation-Logo.png";
